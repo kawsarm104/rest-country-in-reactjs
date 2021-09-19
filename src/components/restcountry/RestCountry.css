@@ -1,0 +1,11 @@
+ .restcountry-parent{
+    overflow-x: hidden;
+} 
+.restcountry-child{
+    /* color: white; */
+    background-color: rgba(128, 128, 128, 0.267);
+
+}
+.restcountry-child img{
+ width: 300px;
+} 
