@@ -6,6 +6,8 @@ function RestCountry() {
   const [countries, setCountries] = useState([]);
   useEffect(() => {
     fetch("https://restcountries.eu/rest/v2/all")
+    //APi er upor vorosha nai
+    // fetch("../../../public/Restcountrydata.json")
       .then((res) => res.json())
       .then((data) => setCountries(data));
   }, []);
@@ -21,7 +23,7 @@ function RestCountry() {
             // flag={country.flag}
             // name={country.name}
             // capital={country.capital}
-            key={country.alpha3Code}// for uniqness
+            key={country.alpha3Code} // for uniqness
             country={country} // sending full object
           />
         ))}
@@ -30,13 +32,13 @@ function RestCountry() {
   );
 }
 const Country = (props) => {
-    const {flag, name, capital} = props.country
+  const { flag, name, capital } = props.country;
   return (
     <div className="restcountry-child col  border g-3 m-3 p-3 rounded-3 w-75 shadow-sm ">
-        <img src={flag} className="" alt="" />
-        <h2>Name: {name}</h2>
-        <h4>Capital: {capital}</h4>
-      </div>
+      <img src={flag} className="" alt="" />
+      <h2>Name: {name}</h2>
+      <h4>Capital: {capital}</h4>
+    </div>
   );
 };
 
